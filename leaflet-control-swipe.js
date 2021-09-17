@@ -27,6 +27,9 @@
       this._update();
       return this._container;
     },
+    onRemove: function (map) {
+        map.getPane('swipePane').remove()      
+    },
     _update: function() {
       var s = this._map.getSwipePaneSize();
       L.DomUtil.setPosition(this._container, L.point(s.x, 0));
